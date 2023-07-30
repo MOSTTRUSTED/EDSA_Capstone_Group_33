@@ -261,7 +261,7 @@
         </button>
       </div>
     </form>
-      <button class="plus-group" autofocus data-toggle="modal" data-target="#createOfferModal">
+      <button class="plus-group" data-bs-toggle="modal" data-bs-target="#createOffer">
         <img class="plus-icon1" alt="" src="{{ url('admin/public/plus1.svg')}}" />
 
         <i class="create-new-offers">Create new offers</i>
@@ -413,18 +413,17 @@
 {{-- modal for adding new offers --}}
 
 <!-- Button to trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#createOfferModal">
+<button type="button" class="btn btn-danger"  data-bs-toggle="modal" data-bs-target="#createOffer">
     Create New Offer
 </button>
 
 <!-- Create Offer Modal -->
-<div class="modal fade" id="createOfferModal" tabindex="-1" role="dialog" aria-labelledby="createOfferModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
+<div class="modal fade" id="createOffer" tabindex="-1" aria-labelledby="createOfferLabel" aria-hidden="true">
+    <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="createOfferModalLabel">Create New Offer</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </button>
             </div>
             <div class="modal-body">
@@ -448,8 +447,8 @@
                         <input type="date" class="form-control" name="expiry_date" id="expiry_date">
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary">Create Offer</button>
+                        
+                        <button type="submit" class="btn btn-danger">Create Offer</button>
                     </div>
                 </form>
             </div>
